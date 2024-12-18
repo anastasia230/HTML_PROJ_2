@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subcategories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .subcategory {
+            margin-bottom: 20px;
+        }
+
+        .subcategory img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Subcategories</h1>
+
+    <!-- Subcategories List -->
+    <div id="subcategories-list"></div>
+
+    <!-- Handlebars Template for Subcategories -->
+    <script id="subcategory-template" type="text/x-handlebars-template">
+    {{#each subcategories}}
+      <div class="subcategory">
+        <h3>{{title}}</h3>
+        <img src="{{img_url}}" alt="{{title}}" />
+        <p>{{description}}</p>
+        <button onclick="loadLearningItems({{id}})">View Learning Items</button>
+      </div>
+    {{/each}}
+  </script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="subcategory.js"></script>
+
+</body>
+
+</html>

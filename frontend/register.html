@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Φόρμα Εγγραφής</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="register.js"></script>
+</head>
+<body class="form-wrapper">
+    <nav class="register">
+        <ul>
+            <li><a href="index.html">
+                <img src="pngs/home-icon.png" alt="Εικονίδιο Αρχικής Σελίδας">
+                <span>Αρχική</span></a></li>
+        </ul>
+    <nav>
+    <h3>Εγγραφή στην Υπηρεσία</h3>
+    <div class="form-wrapper">
+    <form id="registrationForm">
+        <!-- Προσωπικά Στοιχεία -->
+        <fieldset>
+            <legend>Προσωπικά Στοιχεία</legend>
+            <label for="fullName">Ονοματεπώνυμο:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="π.χ. Μαρία Παπαδοπούλου" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="π.χ. maria@example.com" required>
+            <p class="help">Please enter a valid email address.</p>
+
+            <label for="address">Διεύθυνση Κατοικίας:</label>
+            <input type="text" id="address" name="address" placeholder="π.χ. Αθηνών 123" required>
+            
+            <label for="birthDate">Ημερομηνία Γέννησης:</label>
+            <input type="date" id="birthDate" name="birthDate" min="1923-01-01" max="2007-11-30" required>
+
+            <label for="phone">Τηλέφωνο Επικοινωνίας:</label>
+            <input type="tel" id="phone" name="phone" placeholder="π.χ. 6912345678" pattern="[0-9]{10}" required>
+        </fieldset>
+
+        <!-- Στοιχεία Ταυτοποίησης -->
+        <fieldset>
+            <legend>Στοιχεία Ταυτοποίησης</legend>
+            <label for="username">Όνομα Χρήστη:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Κωδικός:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirmPassword">Επιβεβαίωση Κωδικού:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </fieldset>
+
+        <!-- Επιλογές Επικοινωνίας -->
+        <fieldset>
+            <legend>Επιλογές Επικοινωνίας</legend>
+            <label>
+                <input type="checkbox" name="communication" value="sms"> SMS
+            </label>
+            <label>
+                <input type="checkbox" name="communication" value="email"> Email
+            </label>
+            <label>
+                <input type="checkbox" name="communication" value="viber"> Viber
+            </label>
+            <label>
+                <input type="checkbox" name="communication" value="whatsapp"> WhatsApp
+            </label>
+        </fieldset>
+
+        <!-- Ερωτηματολόγιο -->
+        <fieldset>
+            <legend>Ερωτηματολόγιο</legend>
+            <label>Επίπεδο Εκπαίδευσης:</label>
+            <select name="educationLevel" required>
+                <option value="">Επιλέξτε</option>
+                <option value="highschool">Λύκειο</option>
+                <option value="bachelor">Πτυχίο</option>
+                <option value="master">Μεταπτυχιακό</option>
+                <option value="phd">Διδακτορικό</option>
+            </select>
+            
+            <label for="occupation">Ποια είναι η επαγγελματική σας κατάσταση;</label>
+            <label>
+                <input type="radio" name="occupation" required>Φοιτητής/Σπουδαστής
+            </label>
+            <label>
+                <input type="radio" name="occupation" required>Εργαζόμενος (Πλήρης Απασχόληση)
+            </label>
+            <label>
+                <input type="radio" name="occupation" required>Εργαζόμενος (Μερική Απασχόληση)
+            </label>
+            <label>
+                <input type="radio" name="occupation" required>Άνεργος
+            </label>
+            <label>
+                <input type="radio" name="occupation">Άλλο
+                <input type="text" id="occupation" name="occupation">
+            </label>
+            <label for="studyfirst">Είναι η πρώτη φορά που χρησιμοποιείτε πλατφόρμα εξ αποστάσεως εκπαίδευσης;</label>
+            <label>
+                <input type="radio" name="studyfirst" value="yes" required> Ναι
+            </label>
+            <label>
+                <input type="radio" name="studyfirst" value="no" required> Όχι
+            </label>
+            <label for="time">Πόσες ώρες την εβδομάδα σκοπεύετε να αφιερώσετε για τηλεκπαίδευση;</label>
+            <label>
+                <input type="radio" name="time" required> Λιγότερο από 2 ώρες
+            </label>
+            <label>
+                <input type="radio" name="time" required> 2-5 ώρες
+            </label>
+            <label>
+                <input type="radio" name="time" required> Πάνω από 5 ώρες
+            </label>
+            <label for="recommendedtime">Ποιος είναι ο προτιμώμενος τρόπος εκμάθησης για εσάς;</label>
+            <label>
+                <input type="radio" name="recommendedtime" required> Παρακολούθηση βίντεο μαθημάτων
+            </label>
+            <label>
+                <input type="radio" name="recommendedtime" required> Διαδραστικές ασκήσεις
+            </label>
+            <label>
+                <input type="radio" name="recommendedtime" required> Διάβασμα κειμένων/σημειώσεων
+            </label>
+            <label>
+                <input type="radio" name="recommendedtime" required> Συμμετοχή σε διαδικτυακές συζητήσεις (π.χ. φόρουμ, ομάδες)
+            </label>
+            <label for="language">Ποια γλώσσα προτιμάτε να χρησιμοποιείτε για τα μαθήματα και το υλικό;</label>
+            <label>
+                <input type="radio" name="language" required> Ελληνικά
+            </label>
+            <label>
+                <input type="radio" name="language" required> Αγγλικά
+            </label>
+        </fieldset>
+        <!-- submit button that works with onsubmit function in register.js-->
+        <button type="submit">Υποβολή</button>
+    </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Andromida & Barlikas. Όλα τα δικαιώματα διατηρούνται.</p>
+    </footer>
+    <script src="register.js"></script>
+</body>
+</html>
