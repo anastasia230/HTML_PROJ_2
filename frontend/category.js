@@ -1,11 +1,11 @@
-// subcategory.js
+// category.js
 
 const API_BASE_URL = "https://learning-hub-1whk.onrender.com";
 
 // Συνάρτηση για φόρτωση στοιχείων εκπαιδευτικού υλικού
-async function fetchLearningItems(subcategoryId) {
+async function fetchLearningItems(categoryId) {
     try {
-        const response = await fetch(`${API_BASE_URL}/learning-items?subcategory=${subcategoryId}`);
+        const response = await fetch(`${API_BASE_URL}/learning-items?category=${categoryId}`);
         if (!response.ok) throw new Error("Σφάλμα κατά τη φόρτωση στοιχείων εκπαιδευτικού υλικού");
 
         const learningItems = await response.json();
@@ -25,10 +25,10 @@ function displayLearningItems(learningItems) {
 
 // Εκτέλεση κατά την έναρξη
 document.addEventListener("DOMContentLoaded", () => {
-    const subcategoryId = new URLSearchParams(window.location.search).get('id');
-    if (subcategoryId) {
-        fetchLearningItems(subcategoryId);
+    const categoryId = new URLSearchParams(window.location.search).get('id');
+    if (categoryId) {
+        fetchLearningItems(categoryId);
     } else {
-        console.error("Subcategory ID is missing in the URL");
+        console.error("Category ID is missing in the URL");
     }
 });

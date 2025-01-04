@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Κατηγορίες Μαθημάτων</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="categories.js" defer></script>
-    <script src="data.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <header>
         <img id="logo" src="pngs/LILNERDS.png" alt="Λογότυπο Εκπαίδευσης">
         <h1>LilNerds</h1>
-        <nav id = "categories">
+        <nav id="categories">
             <ul>
                 <li><a href="indexpx1.html">
                     <img src="pngs/home-icon.png" alt="Εικονίδιο Αρχικής Σελίδας">
@@ -26,36 +26,28 @@
     
     <main>
         <h2>Μαθήματα Πληροφορικής</h2>
-        <section class="category-section">
-            <!-- <article>
-                <img id="course" src="pngs/10-applications-of-object-oriented-programming.jpeg" alt="Αντικειμενοστρεφής Σχεδίαση">
-                <h3>Αντικειμενοστρεφής Σχεδίαση</h3>
-                <ul>
-                    <li><a href="oodesign.html">Αντικειμενοστρεφής Σχεδίαση</a></li>
-                    <li>Ποιότητα και Έλεγχος Λογισμικού</li>
-                </ul>
-            </article> -->
-            <article>
-                <img id="course" src="pngs/fig1-1024x382.jpeg" alt="Νευρωνικά Δίκτυα">
-                <h3>Νευρωνικά Δίκτυα</h3>
-                <ul>
-                    <li><a href="java-programming.html">Νευρωνικά Δίκτυα</a></li>
-                    <li>Αρχιτεκτονική Σχεδίαση</li>
-                </ul>
-            </article>
-            <article>
-                <img id="course" src="pngs/java-logo.png" alt="Java Introduction">
-                <h3>Java Introduction</h3>
-                <ul>
-                    <li><a href="java-introduction.html">Java για αρχάριους</a></li>
-                    <li>Java για προχωρημένους</li>
-                </ul>
-            </article>
+        <section class="category-section" id="category-section">
+            <!-- Οι κατηγορίες θα φορτωθούν δυναμικά εδώ -->
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Andromida & Barlikas. Όλα τα δικαιώματα διατηρούνται.</p>
     </footer>
+
+    <!-- Handlebars Template for Categories -->
+    <script id="category-template" type="text/x-handlebars-template">
+        {{#each categories}}
+        <article>
+            <img id="course" src="{{img_url}}" alt="{{title}}">
+            <h3>{{title}}</h3>
+            <ul>
+                {{#each subcategories}}
+                <li><a href="subcategory.html?id={{id}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </article>
+        {{/each}}
+    </script>
 </body>
 </html>
