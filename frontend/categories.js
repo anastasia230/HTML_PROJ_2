@@ -1,11 +1,11 @@
 // categories.js
 
-const API_BASE_URL = "https://learning-hub-1whk.onrender.com";
+const LOCAL_BASE_URL = "/data"; // Directory where your JSON files are located
 
 // Συνάρτηση για φόρτωση κατηγοριών
 async function fetchCategories() {
     try {
-        const response = await fetch(`${API_BASE_URL}/categories`);
+        const response = await fetch(`${LOCAL_BASE_URL}/categories.json`);
         if (!response.ok) throw new Error("Σφάλμα κατά τη φόρτωση κατηγοριών");
         
         const categories = await response.json();
@@ -21,10 +21,11 @@ async function fetchCategories() {
 // Συνάρτηση για φόρτωση υποκατηγοριών
 async function fetchSubcategories(categoryId) {
     try {
-        const response = await fetch(`${API_BASE_URL}/categories/${categoryId}/subcategories`);
+        const response = await fetch(`${LOCAL_BASE_URL}/subcategories.json`);
         if (!response.ok) throw new Error("Σφάλμα κατά τη φόρτωση υποκατηγοριών");
 
-        return await response.json();
+        const subcategories = await response.json();
+        return subcategories.filter(subcategory => subcategory.category_id === categoryId);
     } catch (error) {
         console.error(`Πρόβλημα με τις υποκατηγορίες για την κατηγορία ${categoryId}:`, error);
         return [];

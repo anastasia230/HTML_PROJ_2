@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "title": "Software Development",
+      "img_url": "static/images/img-cat1.png"
+    },
+    {
+      "id": 2,
+      "title": "Programming Languages",
+      "img_url": "static/images/img-cat2.png"
+    },
+    {
+      "id": 3,
+      "title": "Data Science",
+      "img_url": "static/images/img-cat3.png"
+    },
+    {
+      "id": 4,
+      "title": "DevOps",
+      "img_url": "static/images/img-cat4.png"
+    }
+  ]

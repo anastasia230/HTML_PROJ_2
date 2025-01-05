@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "category_id": 1,
+        "title": "Προγραμματισμός"
+    },
+    {
+        "id": 2,
+        "category_id": 1,
+        "title": "Δίκτυα"
+    },
+    {
+        "id": 3,
+        "category_id": 2,
+        "title": "Άλγεβρα"
+    }
+]
