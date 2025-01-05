@@ -2,16 +2,34 @@
     {
         "id": 1,
         "category_id": 1,
-        "title": "Προγραμματισμός"
+        "title": "Αντικειμενοστρεφής Σχεδίαση",
+        "subcat-page": "oodesign.html"
     },
     {
         "id": 2,
         "category_id": 1,
-        "title": "Δίκτυα"
+        "title": "Ποιότητα και Έλεγχος Λογισμικού"
     },
     {
         "id": 3,
         "category_id": 2,
-        "title": "Άλγεβρα"
+        "title": "Νευρωνικά Δίκτυα",
+        "subcat-page": "java-programming.html"
+    },
+    {
+        "id": 4,
+        "category_id": 2,
+        "title": "Αρχιτεκτονική Σχεδίαση"
+    },
+    {
+        "id": 5,
+        "category_id": 3,
+        "title": "Java για αρχάριους",
+        "subcat-page":"java-programming.html"
+    },
+    {
+        "id": 6,
+        "category_id": 3,
+        "title": "Java για προχωρημένους"
     }
 ]

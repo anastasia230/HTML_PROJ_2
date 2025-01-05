@@ -1,6 +1,6 @@
 // categories.js
 
-const LOCAL_BASE_URL = "/data"; // Directory where your JSON files are located
+const LOCAL_BASE_URL = "./data"; // Directory where your JSON files are located
 
 // Συνάρτηση για φόρτωση κατηγοριών
 async function fetchCategories() {
@@ -39,6 +39,31 @@ function displayCategories(categories) {
     const html = template({ categories });
     document.getElementById('category-section').innerHTML = html;
 }
+
+// Συνάρτηση για φόρτωση υποκατηγοριών
+/*async function fetchSubcategories() {
+    try {
+        const response = await fetch(`${LOCAL_BASE_URL}/subcategories.json`);
+        if (!response.ok) throw new Error("Σφάλμα κατά τη φόρτωση υποκατηγοριών");
+
+        const subcategories = await response.json();
+        displaySubcategories(subcategories);
+    } catch (error) {
+        console.error("Πρόβλημα με τη λήψη δεδομένων:", error);
+    }
+}
+
+// Συνάρτηση για εμφάνιση υποκατηγοριών
+function displaySubcategories(subcategories) {
+    const subcatPage = document.getElementById('subcat-page');
+    subcategories.forEach(subcategory => {
+        const link = document.createElement('a');
+        link.href = `subcategory.html?id=${subcategory.id}`;
+        link.textContent = subcategory.title;
+        subcatPage.appendChild(link);
+        subcatPage.appendChild(document.createElement('br')); // Προσθέτει νέα γραμμή μετά από κάθε λινκ
+    });
+}*/
 
 // Εκτέλεση κατά την έναρξη
 document.addEventListener("DOMContentLoaded", fetchCategories);

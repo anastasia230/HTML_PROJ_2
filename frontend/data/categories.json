@@ -1,22 +1,17 @@
 [
     {
       "id": 1,
-      "title": "Software Development",
-      "img_url": "static/images/img-cat1.png"
+      "title": "Αντικειμενοστρεφής Σχεδίαση",
+      "img_url": "pngs/10-applications-of-object-oriented-programming.jpeg"
     },
     {
       "id": 2,
-      "title": "Programming Languages",
-      "img_url": "static/images/img-cat2.png"
+      "title": "Νευρωνικά Δίκτυα",
+      "img_url": "pngs/fig1-1024x382.jpeg"
     },
     {
       "id": 3,
-      "title": "Data Science",
-      "img_url": "static/images/img-cat3.png"
-    },
-    {
-      "id": 4,
-      "title": "DevOps",
-      "img_url": "static/images/img-cat4.png"
+      "title": "Java Introduction",
+      "img_url": "pngs/java-logo.png"
     }
   ]
