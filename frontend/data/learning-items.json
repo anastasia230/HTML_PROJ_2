@@ -1,25 +1,86 @@
 [
     {
         "id": 1,
-        "category_id": 1,
-        "type": "Book",
-        "title": "Εισαγωγή στην Πληροφορική",
-        "author": "John Doe",
-        "publisher": "Tech Books",
-        "publication_date": "2020-01-01",
-        "description": "Ένα βιβλίο για την εισαγωγή στην πληροφορική.",
+        "subcategory_id": 5,
+        "type": "lecture",
+        "title": "Java Introduction - Διάλεξη",
+        "description": "Αυτή η διάλεξη παρουσιάζει τις βασικές αρχές προγραμματισμού με Java, καλύπτοντας έννοιες όπως μεταβλητές, βρόχοι και κλάσεις.",
         "cost": 30,
-        "image": "path/to/book1.png",
-        "link": "https://example.com/book1"
+        "chapter-title": "Κεφάλαια της Διάλεξης",
+        "chapters": ["Κεφάλαιο 1: Εισαγωγή στον Προγραμματισμό με Java",
+                "Κεφάλαιο 2: Μεταβλητές και Τύποι Δεδομένων",
+                "Κεφάλαιο 3: Βρόχοι και Ροή Ελέγχου",
+                "Κεφάλαιο 4: Συναρτήσεις και Μέθοδοι",
+                "Κεφάλαιο 5: Κλάσεις και Αντικείμενα"]
     },
     {
         "id": 2,
-        "category_id": 1,
-        "type": "Lecture",
-        "title": "Διαλέξεις Πληροφορικής",
+        "subcategory_id": 3,
+        "type": "header",
+        "title": "Νευρωνικά Δίκτυα - Βιβλία και Διαλέξεις",
+        "description": "Μια σειρά διαλέξεων για την πληροφορική."
+    },
+    {
+        "id": 3,
+        "subcategory_id": 3,
+        "type": "book",
+        "title": "Deep Learning",
         "description": "Μια σειρά διαλέξεων για την πληροφορική.",
+        "author": "Ian Goodfellow, Yoshua Bengio, Aaron Courville",
+        "pages": 800,
+        "reviews": "Αξιολόγηση: ★★★★★ (5/5) - 150 αξιολογήσεις",
         "cost": 50,
-        "image": "path/to/lecture1.png",
-        "link": "https://example.com/lecture1"
+        "image": "pngs/dl book.jpeg"
+    },
+    {
+        "id": 4,
+        "subcategory_id": 3,
+        "type": "lecture",
+        "title": "Introduction to Neural Networks",
+        "length": 2.5,
+        "reviews": "Αξιολόγηση: ★★★★★ (5/5)",
+        "link": "intro-neural-networks.mp4"
+    },
+    {
+        "id": 5,
+        "subcategory_id": 1,
+        "type": "book",
+        "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+        "reviews": "Αξιολόγηση: ★★★★☆ (4/5) - 100 αξιολογήσεις",
+        "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+        "pages": 395,
+        "cost": 40,
+        "image": "pngs/oos book.jpeg"
+    },
+    {
+        "id": 6,
+        "subcategory_id": 1,
+        "type": "book",
+        "title": "Head First Design Patterns",
+        "author": "Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra",
+        "pages": 450,
+        "reviews": "Αξιολόγηση: ★★★★★ (5/5) - 200 αξιολογήσεις",
+        "image": "pngs/hfdp book.jpeg",
+        "cost": 45
+    },
+    {
+        "id": 7,
+        "subcategory_id": 1,
+        "type": "lecture",
+        "title": "Introduction to Design Patterns",
+        "description":"Αυτή η διάλεξη καλύπτει τις βασικές έννοιες των σχεδιαστικών μοτίβων (Design Patterns) και την πρακτική τους εφαρμογή στον προγραμματισμό.",
+        "length": 7.21,
+        "reviews": "Αξιολόγηση: ★★★★☆ (4/5)",
+        "link": "https://youtu.be/tAuRQs_d9F8?si=OvZU6qqbhbW_phBm"
+    },
+    {
+        "id": 8,
+        "subcategory_id": 1,
+        "type": "lecture",
+        "title": "Advanced Design Patterns",
+        "description": "Αυτή η διάλεξη απευθύνεται σε προχωρημένους χρήστες και εστιάζει στη χρήση πιο σύνθετων σχεδιαστικών μοτίβων.",
+        "length": 11.03,
+        "reviews": "Αξιολόγηση: ★★★★★ (5/5) - 300 αξιολογήσεις",
+        "link": "https://youtu.be/tv-_1er1mWI?si=b0VwpOz7xGph0obL"
     }
 ]

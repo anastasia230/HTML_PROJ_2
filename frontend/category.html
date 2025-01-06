@@ -26,8 +26,9 @@
     
     <main>
         <h2 id="category-title"></h2>
-        <section class="learning-items-section" id="learning-items-section">
-            <!-- Τα στοιχεία εκπαιδευτικού υλικού θα φορτωθούν δυναμικά εδώ -->
+        <img id="category-image" src="" alt="Εικόνα Κατηγορίας">
+        <section class="subcategory-section" id="subcategory-section">
+            <!-- Οι υποκατηγορίες θα φορτωθούν δυναμικά εδώ -->
         </section>
     </main>
 
@@ -35,20 +36,13 @@
         <p>&copy; 2024 Andromida & Barlikas. Όλα τα δικαιώματα διατηρούνται.</p>
     </footer>
 
-    <!-- Handlebars Template for Learning Items -->
-    <script id="learning-item-template" type="text/x-handlebars-template">
-        {{#each learningItems}}
+    <!-- Handlebars Template for Subcategories -->
+    <script id="subcategory-template" type="text/x-handlebars-template">
+        {{#each subcategories}}
         <article>
-            <img src="{{image}}" alt="{{title}}">
-            <h3>{{title}}</h3>
-            <p>{{description}}</p>
-            {{#if (eq type "Book")}}
-            <p>Συγγραφέας: {{author}}</p>
-            <p>Εκδότης: {{publisher}}</p>
-            <p>Ημερομηνία Έκδοσης: {{publication_date}}</p>
-            {{/if}}
-            <p>Κόστος: {{cost}}€</p>
-            <a href="{{link}}" target="_blank">Περισσότερα</a>
+            <a href="subcategory.html?id={{id}}">
+                <h3>{{title}}</h3>
+            </a>
         </article>
         {{/each}}
     </script>

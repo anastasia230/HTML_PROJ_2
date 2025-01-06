@@ -312,11 +312,7 @@ button:hover {
     }
 }
 
-/* Responsive Images */
-img {
-    width: 100%;
-    height: auto;
-}
+
 
 @media (max-width: 768px) {
 
@@ -337,6 +333,16 @@ img {
     padding: 20px;
     justify-content: center;
     align-items: center;
+}
+
+.category-section img {
+    width: 200px;
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 50%;
+    /* Add rounded corners if needed */
+    margin-top: 10px;
+    /* Adjust margin-top as needed */
 }
 
 .category-section article {
@@ -417,6 +423,22 @@ img {
 }
 
 .book p {
+    margin-top: 10px;
+}
+
+#category-title {
+    font-family: 'Volkorn';
+    font-size: 40px;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#category-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: auto;
     margin-top: 10px;
 }
 
