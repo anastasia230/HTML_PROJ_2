@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "category_id": 1,
+        "type": "Book",
+        "title": "Εισαγωγή στην Πληροφορική",
+        "author": "John Doe",
+        "publisher": "Tech Books",
+        "publication_date": "2020-01-01",
+        "description": "Ένα βιβλίο για την εισαγωγή στην πληροφορική.",
+        "cost": 30,
+        "image": "path/to/book1.png",
+        "link": "https://example.com/book1"
+    },
+    {
+        "id": 2,
+        "category_id": 1,
+        "type": "Lecture",
+        "title": "Διαλέξεις Πληροφορικής",
+        "description": "Μια σειρά διαλέξεων για την πληροφορική.",
+        "cost": 50,
+        "image": "path/to/lecture1.png",
+        "link": "https://example.com/lecture1"
+    }
+]

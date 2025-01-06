@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Κατηγορίες Μαθημάτων</title>
+    <title>Κατηγορία Εκπαιδευτικού Υλικού</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script src="categories.js" defer></script>
+    <script src="category.js" defer></script>
 </head>
 <body>
     <header>
         <img id="logo" src="pngs/LILNERDS.png" alt="Λογότυπο Εκπαίδευσης">
         <h1>LilNerds</h1>
-        <nav id="categories">
+        <nav>
             <ul>
                 <li><a href="indexpx1.html">
                     <img src="pngs/home-icon.png" alt="Εικονίδιο Αρχικής Σελίδας">
@@ -25,9 +25,9 @@
     </header>
     
     <main>
-        <h2>Μαθήματα Πληροφορικής</h2>
-        <section class="category-section" id="category-section">
-            <!-- Οι κατηγορίες θα φορτωθούν δυναμικά εδώ -->
+        <h2 id="category-title">Κατηγορία Εκπαιδευτικού Υλικού</h2>
+        <section class="learning-items-section" id="learning-items-section">
+            <!-- Τα στοιχεία εκπαιδευτικού υλικού θα φορτωθούν δυναμικά εδώ -->
         </section>
     </main>
 
@@ -35,17 +35,20 @@
         <p>&copy; 2024 Andromida & Barlikas. Όλα τα δικαιώματα διατηρούνται.</p>
     </footer>
 
-    <!-- Handlebars Template for Categories -->
-    <script id="category-template" type="text/x-handlebars-template">
-        {{#each categories}}
+    <!-- Handlebars Template for Learning Items -->
+    <script id="learning-item-template" type="text/x-handlebars-template">
+        {{#each learningItems}}
         <article>
-            <img id="course" src="{{img_url}}" alt="{{title}}">
+            <img src="{{image}}" alt="{{title}}">
             <h3>{{title}}</h3>
-            <ul>
-                {{#each subcategories}}
-                <li><a href="subcategory.html?id={{id}}">{{title}}</a></li>
-                {{/each}}
-            </ul>
+            <p>{{description}}</p>
+            {{#if (eq type "Book")}}
+            <p>Συγγραφέας: {{author}}</p>
+            <p>Εκδότης: {{publisher}}</p>
+            <p>Ημερομηνία Έκδοσης: {{publication_date}}</p>
+            {{/if}}
+            <p>Κόστος: {{cost}}€</p>
+            <a href="{{link}}" target="_blank">Περισσότερα</a>
         </article>
         {{/each}}
     </script>
