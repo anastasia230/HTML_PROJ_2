@@ -17,6 +17,9 @@
                 <li><a href="indexpx1.html">
                     <img src="pngs/home-icon.png" alt="Εικονίδιο Αρχικής Σελίδας">
                     <span>Αρχική</span></a></li>
+                <li><a href="categories.html">
+                    <img src="pngs/categories-icon.png" alt="Εικονίδιο Κατηγοριών">
+                    <span>Κατηγορίες Μαθημάτων</span></a></li>
                 <li><a href="about.html">
                     <img src="pngs/about-icon.png" alt="Εικονίδιο Ποιοι Είμαστε">
                     <span>Ποιοι Είμαστε</span></a></li>
@@ -25,9 +28,11 @@
     </header>
     
     <main>
-        <h2 id="subcategory-title">Υποκατηγορία Εκπαιδευτικού Υλικού</h2>
-        <section class="learning-items-section" id="learning-items-section">
-            <!-- Τα στοιχεία εκπαιδευτικού υλικού θα φορτωθούν δυναμικά εδώ -->
+        <section>
+            <h2 id="subcategory-title"></h2>
+            <section class="learning-items-section" id="learning-items-section">
+                <!-- Τα στοιχεία εκπαιδευτικού υλικού θα φορτωθούν δυναμικά εδώ -->
+            </section>
         </section>
     </main>
 
@@ -42,13 +47,11 @@
             <img src="{{image}}" alt="{{title}}">
             <h3>{{title}}</h3>
             <p>{{description}}</p>
-            {{#if (eq type "Book")}}
             <p>Συγγραφέας: {{author}}</p>
             <p>Εκδότης: {{publisher}}</p>
-            <p>Ημερομηνία Έκδοσης: {{publication_date}}</p>
-            {{/if}}
             <p>Κόστος: {{cost}}€</p>
-            <a href="{{link}}" target="_blank">Περισσότερα</a>
+            <p>Σύνδεσμος : {{link}}</p>
+            <p>features : {{features}}</p>
         </article>
         {{/each}}
     </script>
