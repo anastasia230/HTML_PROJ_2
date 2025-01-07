@@ -1,5 +1,3 @@
-// category.js
-
 const LOCAL_BASE_URL = "./data";
 let sessionId = null;
 let username = null;
@@ -65,6 +63,8 @@ async function loginUser(event) {
             document.getElementById('login-message').textContent = 'Επιτυχής σύνδεση!';
             document.getElementById('welcome-message').textContent = `Καλώς ορίσατε, ${username}!`;
         } else {
+            const errorText = await response.text();
+            console.error('Αποτυχία σύνδεσης:', errorText);
             document.getElementById('login-message').textContent = 'Αποτυχία σύνδεσης. Παρακαλώ δοκιμάστε ξανά.';
         }
     } catch (error) {
@@ -92,6 +92,8 @@ async function addToCart(id, type, title, cost) {
         if (response.ok) {
             alert('Το στοιχείο προστέθηκε στο καλάθι σας!');
         } else {
+            const errorText = await response.text();
+            console.error('Πρόβλημα με την προσθήκη στο καλάθι:', errorText);
             alert('Το στοιχείο υπάρχει ήδη στο καλάθι σας.');
         }
     } catch (error) {

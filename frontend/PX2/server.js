@@ -51,6 +51,7 @@ app.post('/cart', (req, res) => {
     res.status(200).send('Item added to cart');
 });
 
+// Εκκίνηση του διακομιστή
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
