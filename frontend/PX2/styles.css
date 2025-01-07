@@ -257,13 +257,10 @@ button:hover {
 .category-section img {
     width: 200px;
     height: auto;
-    /* Maintain aspect ratio */
-    border-radius: 50%;
     /* Add rounded corners if needed */
     margin-top: 10px;
     /* Adjust margin-top as needed */
 }
-
 .subcategory-section article {
     display: flex;
     flex-direction: column;
@@ -275,7 +272,17 @@ button:hover {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.login-section{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    width: 100%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 #category-image{
     width: 100px;
     height: auto;

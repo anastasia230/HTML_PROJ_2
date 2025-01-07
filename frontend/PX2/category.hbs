@@ -1,0 +1,13 @@
+{{#each categories}}
+<div class="category">
+    <h2>{{title}}</h2>
+    <a href="category.html?id={{id}}">
+        <img src="{{img_url}}" alt="{{title}}">
+    </a>
+    <ul>
+        {{#each subcategories}}
+        <li><a href="subcategory.html?id={{id}}">{{title}}</a></li>
+        {{/each}}
+    </ul>
+</div>
+{{/each}}

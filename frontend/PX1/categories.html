@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Υποκατηγορία Εκπαιδευτικού Υλικού</title>
+    <title>Κατηγορίες Εκπαιδευτικού Υλικού</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script src="subcategory.js" defer></script>
+    <script src="scripts/categories.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,9 +17,6 @@
                 <li><a href="indexpx1.html">
                     <img src="pngs/home-icon.png" alt="Εικονίδιο Αρχικής Σελίδας">
                     <span>Αρχική</span></a></li>
-                <li><a href="categories.html">
-                    <img src="pngs/categories-icon.png" alt="Εικονίδιο Κατηγοριών">
-                    <span>Κατηγορίες Μαθημάτων</span></a></li>
                 <li><a href="about.html">
                     <img src="pngs/about-icon.png" alt="Εικονίδιο Ποιοι Είμαστε">
                     <span>Ποιοι Είμαστε</span></a></li>
@@ -28,11 +25,9 @@
     </header>
     
     <main>
-        <section>
-            <h2 id="subcategory-title"></h2>
-            <section class="learning-items-section" id="learning-items-section">
-                <!-- Τα στοιχεία εκπαιδευτικού υλικού θα φορτωθούν δυναμικά εδώ -->
-            </section>
+        <h2>Κατηγορίες Εκπαιδευτικού Υλικού</h2>
+        <section class="category-section" id="category-section">
+            <!-- Οι κατηγορίες θα φορτωθούν δυναμικά εδώ -->
         </section>
     </main>
 
@@ -40,18 +35,14 @@
         <p>&copy; 2024 Andromida & Barlikas. Όλα τα δικαιώματα διατηρούνται.</p>
     </footer>
 
-    <!-- Handlebars Template for Learning Items -->
-    <script id="learning-item-template" type="text/x-handlebars-template">
-        {{#each learningItems}}
+    <!-- Handlebars Template for Categories -->
+    <script id="category-template" type="text/x-handlebars-template">
+        {{#each categories}}
         <article>
-            <img src="{{image}}" alt="{{title}}">
+            <a href="category.html?id={{id}}">
+                <img src="{{img_url}}" alt="{{title}}">
+            </a>
             <h3>{{title}}</h3>
-            <p>{{description}}</p>
-            <p>Συγγραφέας: {{author}}</p>
-            <p>Εκδότης: {{publisher}}</p>
-            <p>Κόστος: {{cost}}€</p>
-            <p>Σύνδεσμος : {{link}}</p>
-            <p>features : {{features}}</p>
         </article>
         {{/each}}
     </script>

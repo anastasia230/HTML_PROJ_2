@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "title": "Αντικειμενοστρεφής Σχεδίαση",
+      "img_url": "pngs/10-applications-of-object-oriented-programming.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Νευρωνικά Δίκτυα",
+      "img_url": "pngs/fig1-1024x382.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Java Introduction",
+      "img_url": "pngs/java-logo.png"
+    }
+  ]

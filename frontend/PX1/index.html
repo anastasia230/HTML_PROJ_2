@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Κατηγορίες Εκπαιδευτικού Υλικού</title>
+    <title>Κατηγορίες Μαθημάτων</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script src="categories.js" defer></script>
 </head>
 <body>
     <header>
         <img id="logo" src="pngs/LILNERDS.png" alt="Λογότυπο Εκπαίδευσης">
         <h1>LilNerds</h1>
-        <nav>
+        <nav id="categories">
             <ul>
                 <li><a href="indexpx1.html">
                     <img src="pngs/home-icon.png" alt="Εικονίδιο Αρχικής Σελίδας">
@@ -25,7 +24,7 @@
     </header>
     
     <main>
-        <h2>Κατηγορίες Εκπαιδευτικού Υλικού</h2>
+        <h2>Μαθήματα Πληροφορικής</h2>
         <section class="category-section" id="category-section">
             <!-- Οι κατηγορίες θα φορτωθούν δυναμικά εδώ -->
         </section>
@@ -39,10 +38,13 @@
     <script id="category-template" type="text/x-handlebars-template">
         {{#each categories}}
         <article>
-            <a href="category.html?id={{id}}">
-                <img src="{{img_url}}" alt="{{title}}">
-            </a>
+            <img id="course" src="{{img_url}}" alt="{{title}}">
             <h3>{{title}}</h3>
+            <ul>
+                {{#each subcategories}}
+                <li><a href="subcategory.html?id={{id}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
         </article>
         {{/each}}
     </script>
