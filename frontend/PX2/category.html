@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="scripts/category.js" defer></script>
+    <script src="scripts/login.js" defer></script>
 </head>
 <body>
-    <header class="category-header">
+    <header>
         <img id="logo" src="pngs/LILNERDS.png" alt="Λογότυπο Εκπαίδευσης">
         <h1>LilNerds</h1>
         <nav>
@@ -22,12 +23,10 @@
                     <span>Ποιοι Είμαστε</span></a></li>
             </ul>
         </nav>
-        <div id="welcome-message" style="position: absolute; top: 10px; left: 10px;"></div>
     </header>
     
     <main>
-        <section class="login-section">
-            <h3>Σύνδεση Χρήστη</h3>
+        <section>
             <form id="login-form">
                 <label for="username">Όνομα Χρήστη:</label>
                 <input type="text" id="username" name="username" required>
@@ -38,11 +37,11 @@
             <div id="login-message"></div>
         </section>
         <section>
-        <h2 id="category-title"></h2>
-        <img id="category-image" src="" alt="Εικόνα Κατηγορίας" style="display: none;">
-        <section class="subcategory-section" id="subcategory-section">
-            <!-- Οι υποκατηγορίες θα φορτωθούν δυναμικά εδώ -->
-        </section>
+            <h2 id="category-title"></h2>
+            <img id="category-image" src="" alt="Εικόνα Κατηγορίας" style="display: none;">
+            <section class="subcategory-section" id="subcategory-section">
+                <!-- Οι υποκατηγορίες θα φορτωθούν δυναμικά εδώ -->
+            </section>
         </section>
     </main>
 

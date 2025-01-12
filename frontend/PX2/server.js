@@ -1,19 +1,27 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 const port = 5500;
 
 app.use(bodyParser.json());
+app.use(express.static('public')); // Serve static files from the 'public' directory
 
-let users = [
-    { username: 'user1', password: 'password1' },
-    { username: 'user2', password: 'password2' }
-];
-
+let users = [];
 let sessions = {};
 let carts = {};
+
+// Load users from JSON file
+fs.readFile('./data/users.json', 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading users file:', err);
+        return;
+    }
+    users = JSON.parse(data);
+    console.log('Users loaded:', users);
+});
 
 // Υπηρεσία ταυτοποίησης (Login Service - LS)
 app.post('/login', (req, res) => {
