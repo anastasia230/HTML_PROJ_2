@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="scripts/category.js" defer></script>
+    <script src="scripts/script.js" defer></script>
     <script src="scripts/login.js" defer></script>
 </head>
 <body>
@@ -27,14 +28,14 @@
     
     <main>
         <section>
-            <form id="login-form">
-                <label for="username">Όνομα Χρήστη:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Κωδικός:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Σύνδεση</button>
-            </form>
-            <div id="login-message"></div>
+            <div id="login-area">
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Όνομα Χρήστη" required>
+                    <input type="password" id="password" placeholder="Κωδικός" required>
+                    <button type="submit">Σύνδεση</button>
+                </form>
+                <p id="login-message"></p>
+            </div>
         </section>
         <section>
             <h2 id="category-title"></h2>

@@ -1,28 +1,16 @@
-document.getElementById('login-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
+const fs = require('fs');
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+// Φόρτωση χρηστών από το users.json
+const users = JSON.parse(fs.readFileSync('users.json', 'utf-8'));
 
-    try {
-        const response = await fetch('/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ username, password })
-        });
+/**
+ * Ελέγχει αν τα credentials είναι σωστά
+ * @param {string} username 
+ * @param {string} password 
+ * @returns {boolean}
+ */
+function validateCredentials(username, password) {
+    return users.some(user => user.username === username && user.password === password);
+}
 
-        if (response.ok) {
-            const data = await response.json();
-            document.getElementById('login-message').textContent = `Welcome, ${data.username}!`;
-            // Store sessionId in localStorage or a cookie for future requests
-            localStorage.setItem('sessionId', data.sessionId);
-        } else {
-            document.getElementById('login-message').textContent = 'Login failed. Please check your credentials.';
-        }
-    } catch (error) {
-        console.error('Error during login:', error);
-        document.getElementById('login-message').textContent = 'An error occurred. Please try again later.';
-    }
-});
+module.exports = validateCredentials;
